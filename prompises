@@ -1,0 +1,15 @@
+let videoOne = new Promise((resolve, reject) => {
+  resolve("recoding video one");
+});
+let videoTwo = new Promise((resolve, reject) => {
+  resolve("recoding video two....");
+});
+let videoThree = new Promise((resolve, reject) => {
+  resolve("recoding video three...");
+});
+
+//List of promises acouring same time
+Promise.all([videoOne,videoTwo,videoThree]).then((messages)=>{console.log(messages)})
+
+
+
